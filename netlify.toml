@@ -1,0 +1,12 @@
+# Legacy Builder deploys as a Next.js app. Netlify applies the current
+# Next.js runtime automatically. Do not pin @netlify/plugin-nextjs.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Audio is uploaded in pieces. Give server routes room for a transcription call.
+[functions]
+  node_bundler = "nft"

@@ -1,0 +1,11 @@
+"use client";
+
+import { buttonClass } from "@/components/ui";
+
+export function PrintButton({ label }: { label: string }) {
+  return (
+    <button type="button" className={`${buttonClass("secondary")} no-print`} onClick={() => window.print()}>
+      {label}
+    </button>
+  );
+}
