@@ -1,12 +1,14 @@
 import { resolveDriver } from "@/lib/db";
-import { providerMode } from "@/lib/ai/mode";
+import { describeAi } from "@/lib/ai/mode";
 
 export const dynamic = "force-dynamic";
 
 export function GET() {
+  const ai = describeAi();
   return Response.json({
     ok: true,
     driver: resolveDriver(),
-    ai: providerMode(),
+    ai: ai.mode,
+    aiSource: ai.source,
   });
 }

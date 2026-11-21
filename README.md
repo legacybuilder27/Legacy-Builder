@@ -30,6 +30,8 @@ With no API key, the app runs end to end:
 
 Set `OPENAI_API_KEY` when you want Whisper transcription and model-written chapters. If the model adds a name or place that nobody said, the app discards that draft and keeps the transcript-based one.
 
+On a Netlify credit-based plan, AI Gateway injects `OPENAI_API_KEY` and `OPENAI_BASE_URL` even when you never added a key. The footer says so. The app still calls `https://api.openai.com` and does not send those requests through the gateway, so they do not succeed. They are not billed to OpenAI, and they do not use Netlify credits. Set your own `OPENAI_API_KEY` (with no gateway base URL) when you want your OpenAI account to run transcription and drafting. `AI_PROVIDER=mock` forces demo mode even if a key is present.
+
 ## Local setup
 
 You need Node.js 22.
@@ -82,7 +84,7 @@ Audio uploads are split into 4 MB pieces so a long call can get through Netlify'
 
 ## Privacy
 
-Each account only sees its own projects. Recordings and transcripts stay in this app's database in demo mode. With an OpenAI key, audio you choose to transcribe, and the text used to draft a chapter, are sent to OpenAI.
+Each account only sees its own projects. Recordings and transcripts stay in this app's database in demo mode. With your own OpenAI key, audio you choose to transcribe, and the text used to draft a chapter, are sent to OpenAI. A Netlify AI Gateway key is not used for those calls.
 
 ## Tests
 

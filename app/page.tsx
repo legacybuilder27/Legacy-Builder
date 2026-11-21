@@ -51,10 +51,10 @@ export default function HomePage() {
         </ol>
         <figure className="mt-14 max-w-3xl border-l-4 border-clay/50 pl-5">
           <blockquote className="font-serif text-2xl leading-9 text-ink">
-            “I ran a lathe. The shop smelled like oil and the coffee was terrible. I could still tell you the sound of a good cut.”
+            “We didn't have much. Mom would cut one orange into eight pieces so every kid got some. I still eat oranges that way.”
           </blockquote>
           <figcaption className="mt-3 text-sm text-ink-soft">
-            A fictional excerpt, from the sample project. It is not a real family.
+            A fictional excerpt. It is not a real family.
           </figcaption>
         </figure>
       </div>
