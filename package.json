@@ -1,0 +1,45 @@
+{
+  "name": "legacy-builder",
+  "version": "1.0.0",
+  "description": "Interview an aging parent and turn the recordings into memoir chapters in their own voice.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legacybuilder27/Legacy-Builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legacybuilder27/Legacy-Builder/issues"
+  },
+  "homepage": "https://github.com/legacybuilder27/Legacy-Builder#readme",
+  "dependencies": {
+    "@fontsource/source-sans-3": "^5.3.1",
+    "@fontsource/source-serif-4": "^5.3.1",
+    "@netlify/blobs": "^11.1.9",
+    "bcryptjs": "^3.0.3",
+    "docx": "^9.16.0",
+    "next": "^15.5.29",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.7.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "typescript": "5.9",
+    "vitest": "^5.1.1"
+  }
+}

@@ -1,0 +1,42 @@
+@import "@fontsource/source-sans-3/latin-400.css";
+@import "@fontsource/source-sans-3/latin-600.css";
+@import "@fontsource/source-serif-4/latin-400.css";
+@import "@fontsource/source-serif-4/latin-600.css";
+@import "@fontsource/source-serif-4/latin-700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(243, 226, 184, 0.7), transparent 55%),
+    #f6f1e7;
+  color: #241f1a;
+}
+
+::selection {
+  background: #f3e2b8;
+}
+
+.prose-measure {
+  max-width: 42rem;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
