@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { logout } from "@/lib/actions/auth";
 import { authSecretIsDefault } from "@/lib/auth/token";
-import { providerMode } from "@/lib/ai/mode";
+import { describeAi, footerNote } from "@/lib/ai/mode";
 import { SubmitButton } from "@/components/SubmitButton";
 import type { PublicUser } from "@/lib/actions/context";
 
@@ -12,7 +12,7 @@ export function Shell({
   user?: PublicUser | null;
   children: React.ReactNode;
 }) {
-  const mode = providerMode();
+  const note = footerNote(describeAi());
   return (
     <div className="min-h-screen">
       <a
@@ -49,11 +49,7 @@ export function Shell({
       </header>
       <main id="main">{children}</main>
       <footer className="no-print mx-auto max-w-5xl px-5 py-10 text-sm leading-6 text-ink-soft">
-        <p>
-          {mode === "mock"
-            ? "Demo mode is on. Transcripts and drafts stay on this server and are not sent to an AI provider."
-            : "An OpenAI key is set. Audio you transcribe, and the text used to draft a chapter, are sent to OpenAI."}
-        </p>
+        <p>{note}</p>
         {authSecretIsDefault() && process.env.NODE_ENV === "production" ? (
           <p className="mt-2">Set AUTH_SECRET before anyone else uses this site.</p>
         ) : null}
