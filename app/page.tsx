@@ -51,7 +51,7 @@ export default function HomePage() {
         </ol>
         <figure className="mt-14 max-w-3xl border-l-4 border-clay/50 pl-5">
           <blockquote className="font-serif text-2xl leading-9 text-ink">
-            “We didn't have much. Mom would cut one orange into eight pieces so every kid got some. I still eat oranges that way.”
+            “We didn't have much. Mom would cut one apple into eight pieces so every kid got some. I still eat apples that way.”
           </blockquote>
           <figcaption className="mt-3 text-sm text-ink-soft">
             A fictional excerpt. It is not a real family.
